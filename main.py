@@ -1,11 +1,9 @@
-# create a ".config" file and put your token in first line
 with open('.config', 'r') as file:
     TOKEN = file.readline()
 
 from telegram import *
 from telegram.ext import *
 import requests as rq
-import io
 
 def img(animal:str):
     response = rq.get(f'https://some-random-api.com/img/{animal}')
